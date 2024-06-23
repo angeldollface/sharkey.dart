@@ -80,7 +80,7 @@ Future<Map<String,dynamic>> getUserFollowing(
   return usersFollowing;
 }
 
-/// Attempts to get a list of users who are
+/// Attempts to get a list of users
 /// following a user. If this fails, an error map is
 /// returned.
 Future<Map<String,dynamic>> getUserFollowers(
