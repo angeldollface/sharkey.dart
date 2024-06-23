@@ -5,7 +5,7 @@ Licensed under the DSL v1.
 */
 import 'package:dio/dio.dart';
 
-/// Attemptsto retrieve a response of
+/// Attempts to retrieve a response of
 /// the supplied type in the request headers and 
 /// with the other supplied parameters. If this succeeds,
 /// the response is returned as a map. If this fails,
