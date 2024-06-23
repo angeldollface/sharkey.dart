@@ -8,7 +8,7 @@ import 'network.dart';
 
 /// Attempts to retrieve a map of
 /// all search results matching the supplied
-/// user's handle. if this fails, an error map
+/// user's handle. If this fails, an error map
 /// is returned.
 Future<Map<String,dynamic>> searchForUser(
   String userName,
