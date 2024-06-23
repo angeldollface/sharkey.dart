@@ -7,8 +7,8 @@ Licensed under the DSL v1.
 import 'users.dart';
 
 /// Checks whether the supplied response map
-/// has an "error" key. If it does, "false" is
-/// returned. If not, "true" is returned.
+/// has an "error" key. If it does, "true" is
+/// returned. If it does not, "false" is returned.
 bool responseIsError(Map<String,dynamic> subject){
   bool result = false;
   if (subject.containsKey("error")){
@@ -19,8 +19,8 @@ bool responseIsError(Map<String,dynamic> subject){
 }
 
 /// Checks whether the supplied user
-/// exists on the given instance. If they do,
-/// "true" is returned. If they don't, "false"
+/// exists on the given instance. If they do exist,
+/// "true" is returned. If they don't exist, "false"
 /// is returned.
 Future<bool> userExists(
 	String userName,
