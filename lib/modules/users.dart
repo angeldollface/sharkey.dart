@@ -62,7 +62,7 @@ Future<Map<String,dynamic>> getUserFollowing(
   }
   else {
     Map<String,dynamic> errMap = new Map();
-    errMap["error"] = "Error response receieved for retrieving user ID!";
+    errMap["error"] = "Error response received for retrieving user ID!";
     return errMap;
   }
   Map<String,dynamic> headers = new Map();
@@ -110,7 +110,7 @@ Future<Map<String,dynamic>> getUserFollowers(
   }
   else {
     Map<String,dynamic> errMap = new Map();
-    errMap["error"] = "Error response receieved for retrieving user ID!";
+    errMap["error"] = "Error response received for retrieving user ID!";
     return errMap;
   }
   Map<String,dynamic> headers = new Map();
@@ -160,7 +160,7 @@ Future<Map<String,dynamic>> followUser(
   }
   else {
     Map<String,dynamic> errMap = new Map();
-    errMap["error"] = "Error response receieved for retrieving user ID!";
+    errMap["error"] = "Error response received for retrieving user ID!";
     return errMap;
   }
   Map<String,dynamic> headers = new Map();
@@ -210,7 +210,7 @@ Future<Map<String,dynamic>> unfollowUser(
   }
   else {
     Map<String,dynamic> errMap = new Map();
-    errMap["error"] = "Error response receieved for retrieving user ID!";
+    errMap["error"] = "Error response received for retrieving user ID!";
     return errMap;
   }
   Map<String,dynamic> headers = new Map();
