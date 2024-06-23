@@ -50,7 +50,7 @@ Future<Map<String,dynamic>> getUserNotes(
 }
 
 /// Attempts to create a text note on the supplied
-/// instance.The visibility can be set to "public",
+/// instance. The visibility can be set to "public",
 /// "home", "followers" or "direct". The "reactionAcceptance"
 /// parameter allows you to set which reactions can be sent.
 /// For the other parameters, when in doubt, please read
