@@ -1,5 +1,5 @@
 name: sharkey
-description: ""
+description: A Dart library to interact with Sharkey, a Mastodon alternative.
 version: 0.1.0
 repository: https://github.com/angeldollface/sharkey.dart
 

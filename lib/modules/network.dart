@@ -1,5 +1,15 @@
+/*
+SHARKEY.DART by Alexander Abraham, 
+a.k.a. "Angel Dollface".
+Licensed under the DSL v1.
+*/
 import 'package:dio/dio.dart';
 
+/// Attemptsto retrieve a response of
+/// the supplied type in the request headers and 
+/// with the other supplied parameters. If this succeeds,
+/// the response is returned as a map. If this fails,
+/// an error is returned as a map.
 Future<Map<String,dynamic>>  fetchJSON(
   String method,
   Map<String, dynamic> headers, 

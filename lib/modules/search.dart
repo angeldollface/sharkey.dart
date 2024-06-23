@@ -1,5 +1,15 @@
+/*
+SHARKEY.DART by Alexander Abraham, 
+a.k.a. "Angel Dollface".
+Licensed under the DSL v1.
+*/
+
 import 'network.dart';
 
+/// Attempts to retrieve a map of
+/// all search results matching the supplied
+/// user's handle. if this fails, an error map
+/// is returned.
 Future<Map<String,dynamic>> searchForUser(
   String userName,
   String server,

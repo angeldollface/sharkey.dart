@@ -1,5 +1,15 @@
+/*
+SHARKEY.DART by Alexander Abraham, 
+a.k.a. "Angel Dollface".
+Licensed under the DSL v1.
+*/
+
 import 'network.dart';
 
+/// Attempts to return the information
+/// about a user profile as a map.
+/// If this fails, an error as a map is
+/// returned.
 Future<Map<String,dynamic>> getUserInfo(
   String userName,
   String server,
@@ -22,6 +32,9 @@ Future<Map<String,dynamic>> getUserInfo(
   return userInfo;
 }
 
+/// Attempts to get a list of users a user
+/// is following. If this fails, an error map is
+/// returned.
 Future<Map<String,dynamic>> getUserFollowing(
   String userName, 
   String server,
@@ -42,11 +55,15 @@ Future<Map<String,dynamic>> getUserFollowing(
       userId = targetUserInfo['id'];
     }
     else {
-      // Hm.
+      Map<String,dynamic> errMap = new Map();
+      errMap["error"] = "Could not retrieve user ID!";
+      return errMap;
     }
   }
   else {
-    // Hm.
+    Map<String,dynamic> errMap = new Map();
+    errMap["error"] = "Error response receieved for retrieving user ID!";
+    return errMap;
   }
   Map<String,dynamic> headers = new Map();
   headers['Content-Type'] = 'application/json';
@@ -61,9 +78,11 @@ Future<Map<String,dynamic>> getUserFollowing(
     reqUrl
   );
   return usersFollowing;
-
 }
 
+/// Attempts to get a list of users who are
+/// following a user. If this fails, an error map is
+/// returned.
 Future<Map<String,dynamic>> getUserFollowers(
   String userName, 
   String server,
@@ -84,11 +103,15 @@ Future<Map<String,dynamic>> getUserFollowers(
       userId = targetUserInfo['id'];
     }
     else {
-      // Hm.
+      Map<String,dynamic> errMap = new Map();
+      errMap["error"] = "Could not retrieve user ID!";
+      return errMap;
     }
   }
   else {
-    // Hm.
+    Map<String,dynamic> errMap = new Map();
+    errMap["error"] = "Error response receieved for retrieving user ID!";
+    return errMap;
   }
   Map<String,dynamic> headers = new Map();
   headers['Content-Type'] = 'application/json';
@@ -103,9 +126,11 @@ Future<Map<String,dynamic>> getUserFollowers(
     reqUrl
   );
   return usersFollowing;
-
 }
 
+/// Attempts to follow a user. If the operation
+/// succeeds, a success map is returned. If this
+/// fails, an error map is returned.
 Future<Map<String,dynamic>> followUser(
   String userName,
   String server,
@@ -128,11 +153,15 @@ Future<Map<String,dynamic>> followUser(
       userId = targetUserInfo['id'];
     }
     else {
-      // Hm.
+      Map<String,dynamic> errMap = new Map();
+      errMap["error"] = "Could not retrieve user ID!";
+      return errMap;
     }
   }
   else {
-    // Hm.
+    Map<String,dynamic> errMap = new Map();
+    errMap["error"] = "Error response receieved for retrieving user ID!";
+    return errMap;
   }
   Map<String,dynamic> headers = new Map();
   headers['Content-Type'] = 'application/json';
@@ -149,6 +178,9 @@ Future<Map<String,dynamic>> followUser(
   return followUserResp;
 }
 
+/// Attempts to follow a user. If the operation
+/// succeeds, a success map is returned. If this
+/// fails, an error map is returned.
 Future<Map<String,dynamic>> unfollowUser(
   String userName,
   String server,
@@ -171,11 +203,15 @@ Future<Map<String,dynamic>> unfollowUser(
       userId = targetUserInfo['id'];
     }
     else {
-      // Hm.
+      Map<String,dynamic> errMap = new Map();
+      errMap["error"] = "Could not retrieve user ID!";
+      return errMap;
     }
   }
   else {
-    // Hm.
+    Map<String,dynamic> errMap = new Map();
+    errMap["error"] = "Error response receieved for retrieving user ID!";
+    return errMap;
   }
   Map<String,dynamic> headers = new Map();
   headers['Content-Type'] = 'application/json';

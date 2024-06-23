@@ -1,6 +1,14 @@
+/*
+SHARKEY.DART by Alexander Abraham, 
+a.k.a. "Angel Dollface".
+Licensed under the DSL v1.
+*/
+
 import 'package:test/test.dart';
 import 'package:sharkey/sharkey.dart';
 
+/// Global variables
+/// that will not change.
 int noteCount = 50;
 String apiBase = "/api";
 String reaction = "like";
@@ -8,6 +16,7 @@ int searchResultCount = 5;
 String server = "blahaj.zone";
 String userToFollow = "frisaf";
 String stdVisibility = "public";
+String impossibleUser = "markzuck";
 String userName = "angeldollface666";
 String reactionAccepted = "likeOnly";
 String baseUrl = "https://blahaj.zone";
@@ -16,6 +25,8 @@ String apiToken = getApiTokenFromEnv("BLAHAJ_API_TOKEN");
 String noteToBeDeletedText = "This note was posted from the \"Sharkey.dart\" test runner. It only exists to be deleted.";
 String testRunnerNote = "This note was posted from the \"Sharkey.dart\" test runner.";
 
+/// Main point of entry
+/// for the Dart compiler.
 Future<void> main() async {
 
   test(
@@ -233,6 +244,22 @@ Future<void> main() async {
         reaction
       );
       expect(false, equals(responseIsError(unlikedNote)));
+    }
+  );
+
+  test(
+    "testing the \"userExists\" function. (true case)",
+    () async {
+      bool uExists = await userExists(userName,server,baseUrl,apiBase);
+      expect(true, uExists);
+    }
+  );
+
+  test(
+    "testing the \"userExists\" function. (false case)",
+    () async {
+      bool uExists = await userExists(impossibleUser,server,baseUrl,apiBase);
+      expect(false, uExists);
     }
   );
 

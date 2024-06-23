@@ -1,5 +1,15 @@
+/*
+SHARKEY.DART by Alexander Abraham, 
+a.k.a. "Angel Dollface".
+Licensed under the DSL v1.
+*/
+
 import 'network.dart';
 
+/// Attempts to retrieve a map
+/// of all notes on the supplied
+/// instance. If this fails, an error
+/// map is returned.
 Future<Map<String,dynamic>> instanceTimeline(
   String baseUrl,
   String apiBase,
@@ -25,6 +35,11 @@ Future<Map<String,dynamic>> instanceTimeline(
   return userInfo;
 }
 
+/// Attempts to retrieve a map
+/// of all notes on the supplied
+/// instance and instances federated
+/// with it. If this fails, an error
+/// map is returned.
 Future<Map<String,dynamic>> globalTimeline(
   String baseUrl,
   String apiBase,
@@ -50,6 +65,10 @@ Future<Map<String,dynamic>> globalTimeline(
   return userInfo;
 }
 
+/// Attempts to retrieve a map
+/// of all notes a user has been mentioned in. 
+/// If this fails, an error
+/// map is returned.
 Future<Map<String,dynamic>> mentionedTimeline(
   String apiToken,
   String baseUrl,

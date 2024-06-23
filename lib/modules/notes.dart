@@ -1,6 +1,15 @@
+/*
+SHARKEY.DART by Alexander Abraham, 
+a.k.a. "Angel Dollface".
+Licensed under the DSL v1.
+*/
+
 import 'users.dart';
 import 'network.dart';
 
+/// Attempts to retrieve the notes
+/// a user has created on the supplied instance
+/// as a map. If this fails, an error map is returned.
 Future<Map<String,dynamic>> getUserNotes(
     String userName, 
     String server,
@@ -40,6 +49,14 @@ Future<Map<String,dynamic>> getUserNotes(
   return postRequest;
 }
 
+/// Attempts to create a text note on the supplied
+/// instance.The visibility can be set to "public",
+/// "home", "followers" or "direct". The "reactionAcceptance"
+/// parameter allows you to set which reactions can be sent.
+/// For the other parameters, when in doubt, please read
+/// the API documentation here: https://misskey.io/api-doc
+/// If the operation succeeds, a success map is returned.
+/// If the operation fails, an error map is returned.
 Future<Map<String,dynamic>> createTextNoteForUser(
   String apiBase,
   String baseUrl,
@@ -73,6 +90,9 @@ Future<Map<String,dynamic>> createTextNoteForUser(
   return postRequest;
 }
 
+/// Attempts to delete a note.
+/// If the operation succeeds, a success map is returned.
+/// If the operation fails, an error map is returned.
 Future<Map<String,dynamic>> deleteNoteForUser(
   String apiBase,
   String baseUrl,
@@ -94,6 +114,10 @@ Future<Map<String,dynamic>> deleteNoteForUser(
   return postRequest;
 }
 
+/// Attempts to like a note.
+/// If the operation succeeds, a success map is returned.
+/// If the operation fails, an error map is returned.
+/// You can customize which reaction you want to send.
 Future<Map<String,dynamic>> likeNoteForUser(
   String apiBase,
   String baseUrl,
@@ -117,6 +141,10 @@ Future<Map<String,dynamic>> likeNoteForUser(
   return postRequest;
 }
 
+/// Attempts to unlike a note.
+/// If the operation succeeds, a success map is returned.
+/// If the operation fails, an error map is returned.
+/// You can customize which reaction you want to reverse.
 Future<Map<String,dynamic>> unlikeNoteForUser(
   String apiBase,
   String baseUrl,
