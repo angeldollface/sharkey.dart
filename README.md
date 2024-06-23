@@ -1,17 +1,17 @@
-# SHARKEY.DART :shark: :dart:
+# SHARKEY.DART
 
 [![GitHub CI](https://github.com/angeldollface/sharkey.dart/actions/workflows/dart.yml/badge.svg)](https://github.com/angeldollface/sharkey.dart/actions)
 
 
-***A Dart library to interact with Sharkey, a Mastodon alternative. :shark: :dart:***
+***A Dart library to interact with Sharkey, a Mastodon alternative.***
 
-## ABOUT :books:
+## ABOUT
 
-This library for Dart is there to interact with Sharkey from Dart or Flutter. This library is supposed to be used for writing apps with Flutter.
+This library for Dart is there to interact with Sharkey from Dart or Flutter. This repository contains the source code for this library.
 
-## INSTALLATION :inbox_tray:
+## INSTALLATION
 
-To add ***Sharkey.dart*** to your project's dependencies, add these lines to your project's `pubspec.yml`:
+To add ***Sharkey.dart*** to your project's dependencies, add these lines to your project's `pubspec.yaml`:
 
 ```YAML
 dependencies:
@@ -21,11 +21,11 @@ dependencies:
       ref: v.0.1.0
 ```
 
-## USAGE :hammer:
+## USAGE
 
-Visit [this link](https://angeldollface.boo/sharkey.dart) to reference APIs and parameters. If you would like to see some code, you can do so by viewing how the APIs ***Sharkey.dart*** provides by reading the file containing unit tests [here](test/sharkey_test.dart).
+Visit [this link](https://angeldollface.boo/sharkey.dart) to reference APIs and how to use them. If you would like to see some code, you can do so by viewing how the APIs are used in the file containing ***Sharkey.dart's*** unit tests [here](https://github.com/angeldollface/sharkey.dart/blob/main/test/sharkey_test.dart).
 
-## CHANGELOG :black_nib:
+## CHANGELOG
 
 ### Version 0.1.0
 
@@ -34,5 +34,5 @@ Visit [this link](https://angeldollface.boo/sharkey.dart) to reference APIs and 
 
 ## NOTE :scroll:
 
-- *Sharkey.dart :shark: :dart:* by Alexander Abraham :black_heart: a.k.a. *"Angel Dollface" :dolls: :ribbon:*
+- *Sharkey.dart* by Alexander Abraham a.k.a. *"Angel Dollface"*
 - Licensed under the [DSL v1](https://github.com/angeldollface/doll-software-license).
