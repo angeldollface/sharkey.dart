@@ -1,3 +1,4 @@
+import 'package:sharkey/modules/timeline.dart';
 import 'package:sharkey/sharkey.dart';
 
 Future<void> main() async {
@@ -47,5 +48,30 @@ Future<void> main() async {
     "/api",
     5,
   );
-  print(searchResults);
+
+  Map<String,dynamic> localTimeline = await instanceTimeline(
+    "https://blahaj.zone", 
+    "/api", 
+    false, 
+    false, 
+    false, 
+    50
+  );
+  Map<String,dynamic> globTimeline = await globalTimeline(
+    "https://blahaj.zone", 
+    "/api", 
+    false, 
+    false, 
+    false, 
+    50
+  );
+  Map<String,dynamic> mentioned = await mentionedTimeline(
+    apiToken, 
+    "https://blahaj.zone", 
+    "/api", 
+    50, 
+    false, 
+    "public"
+  );
+  print(mentioned);
 }

@@ -1,4 +1,4 @@
-import './network.dart';
+import 'network.dart';
 
 Future<Map<String,dynamic>> getUserInfo(
   String userName,
