@@ -177,13 +177,14 @@ Future<void> main() async {
       expect(false, equals(responseIsError(newNote)));
     }
   );
+  
 
   test(
     "Testing the \"deleteNoteForUser\" function.",
     () async {
       Map<String,dynamic> newNoteToBeDeleted = await createTextNoteForUser(
         apiBase,
-		    server,
+		    baseUrl,
 		    apiToken,
 		    stdVisibility,
 		    false,
@@ -193,17 +194,20 @@ Future<void> main() async {
 		    true,
 		    noteToBeDeletedText
       );
+
       String id = newNoteToBeDeleted['result']['createdNote']['id'];
       Map<String,dynamic> deleted = await deleteNoteForUser(
         apiBase, 
-        server,
+        baseUrl,
         apiToken,
         id
       );
+
       expect(false, equals(responseIsError(deleted)));
     }
   );
 
+  
   test(
     "Testing the \"likeNoteForUser\" function.",
     () async {
@@ -214,7 +218,6 @@ Future<void> main() async {
         noteIdToBeLiked,
         reaction
       );
-      print(likedNote);
       expect(false, equals(responseIsError(likedNote)));
     }
   );
