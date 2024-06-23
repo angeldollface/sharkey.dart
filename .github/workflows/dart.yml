@@ -1,9 +1,7 @@
 name: Sharkey.dart CI
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push]
+env:
+  BLAHAJ_API_TOKEN: ${{ secrets.BLAHAJ_API_TOKEN }}
 jobs:
   build:
     runs-on: ubuntu-latest
