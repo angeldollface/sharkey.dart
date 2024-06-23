@@ -56,7 +56,7 @@ Future<void> main() async {
   );
 
   test(
-    "Testing the \"getUserFollowing\" function.",
+    "Testing the \"getUserFollowers\" function.",
     () async {
       Map<String,dynamic> usersFollowers = await getUserFollowers(
         userName,
