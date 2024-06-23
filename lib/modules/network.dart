@@ -17,7 +17,12 @@ Future<Map<String,dynamic>>  fetchJSON(
   if (method == 'POST'){
     try {
       resp = await dioInstance.post(reqUrl, data: payload);
-      result["result"] = resp.data;
+      if (resp.data == ''){
+        result["result"] = "success";
+      }
+      else {
+        result["result"] = resp.data;
+      }
     }
     catch(e){
       result["error"] = e.toString();
@@ -26,7 +31,12 @@ Future<Map<String,dynamic>>  fetchJSON(
   else {
     try {
       resp = await dioInstance.get(reqUrl, data: payload);
-      result["result"] = resp.data;
+      if (resp.data == ''){
+        result["result"] = 'success';
+      }
+      else {
+        result["result"] = resp.data;
+      }
     }
     catch(e){
       result["error"] = e.toString();
@@ -34,5 +44,3 @@ Future<Map<String,dynamic>>  fetchJSON(
   }
   return result;
 }
-
-

@@ -1,5 +1,8 @@
 # SHARKEY.DART :shark: :dart:
 
+[![GitHub CI](https://github.com/angeldollface/sharkey.dart/actions/workflows/dart.yml/badge.svg)](https://github.com/angeldollface/sharkey.dart/actions)
+
+
 ***A Dart library to interact with Sharkey, a Mastodon alternative. :shark: :dart:***
 
 ## ABOUT :books:
