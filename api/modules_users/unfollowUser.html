@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the unfollowUser function from the users library, for the Dart programming language.">
+  <title>unfollowUser function - users library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">sharkey</a></li>
+    <li><a href="../modules_users/modules_users-library.html">modules&#47;users.dart</a></li>
+    <li class="self-crumb">unfollowUser function</li>
+  </ol>
+  <div class="self-name">unfollowUser</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="modules_users&#47;modules_users-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-function">unfollowUser</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype"><a href="https://api.dart.dev/stable/3.4.4/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.4.4/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.4.4/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>&gt;</span></span>
+<span class="name ">unfollowUser</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="unfollowUser-param-userName"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.4.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">userName</span>, </span></li>
+<li><span class="parameter" id="unfollowUser-param-server"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.4.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">server</span>, </span></li>
+<li><span class="parameter" id="unfollowUser-param-apiToken"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.4.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">apiToken</span>, </span></li>
+<li><span class="parameter" id="unfollowUser-param-baseUrl"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.4.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">baseUrl</span>, </span></li>
+<li><span class="parameter" id="unfollowUser-param-apiBase"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.4.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">apiBase</span>, </span></li>
+<li><span class="parameter" id="unfollowUser-param-withReplies"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.4.4/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">withReplies</span></span></li>
+</ol>)
+
+        
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Attempts to follow a user. If the operation
+succeeds, a success map is returned. If this
+fails, an error map is returned.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;Map&lt;String,dynamic&gt;&gt; unfollowUser(
+  String userName,
+  String server,
+  String apiToken,
+  String baseUrl,
+  String apiBase,
+  bool withReplies
+) async {
+  String reqUrl = &#39;$baseUrl$apiBase&#47;following&#47;delete&#39;;
+  Map&lt;String,dynamic&gt; targetUserResponse = await getUserInfo(
+    userName,
+    server,
+    baseUrl,
+    apiBase
+  );
+  String userId = &#39;&#39;;
+  if (targetUserResponse.containsKey(&#39;result&#39;)){
+    Map&lt;String,dynamic&gt; targetUserInfo = targetUserResponse[&quot;result&quot;];
+    if (targetUserInfo.containsKey(&#39;id&#39;)){
+      userId = targetUserInfo[&#39;id&#39;];
+    }
+    else {
+      Map&lt;String,dynamic&gt; errMap = new Map();
+      errMap[&quot;error&quot;] = &quot;Could not retrieve user ID!&quot;;
+      return errMap;
+    }
+  }
+  else {
+    Map&lt;String,dynamic&gt; errMap = new Map();
+    errMap[&quot;error&quot;] = &quot;Error response receieved for retrieving user ID!&quot;;
+    return errMap;
+  }
+  Map&lt;String,dynamic&gt; headers = new Map();
+  headers[&#39;Content-Type&#39;] = &#39;application&#47;json&#39;;
+  Map&lt;String,dynamic&gt; payload = new Map();
+  payload[&#39;i&#39;] = apiToken;
+  payload[&#39;withReplies&#39;] = withReplies;
+  payload[&#39;userId&#39;] = userId;
+  Map&lt;String,dynamic&gt; followUserResp = await fetchJSON(
+    &#39;POST&#39;,
+    headers,
+    payload,
+    reqUrl
+  );
+  return followUserResp;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">sharkey</a></li>
+    <li><a href="../modules_users/modules_users-library.html">users</a></li>
+    <li class="self-crumb">unfollowUser function</li>
+</ol>
+
+
+    <h5>users library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    sharkey
+      0.1.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
