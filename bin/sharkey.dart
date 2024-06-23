@@ -39,5 +39,13 @@ Future<void> main() async {
     "/api",
     false
   );
-  print(unfollowUserResp);
+
+  Map<String,dynamic> searchResults = await searchForUser(
+    "frisaf",
+    "blahaj.zone",
+    "https://blahaj.zone",
+    "/api",
+    5,
+  );
+  print(searchResults);
 }

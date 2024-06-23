@@ -1,5 +1,3 @@
-import 'package:sharkey/sharkey.dart';
-
 import './network.dart';
 
 Future<Map<String,dynamic>> getUserInfo(
