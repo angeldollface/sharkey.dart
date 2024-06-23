@@ -1,6 +1,7 @@
 import 'package:sharkey/sharkey.dart';
 
 Future<void> main() async {
+  String apiToken = getApiTokenFromEnv("BLAHAJ_API_TOKEN");
   Map<String,dynamic> userInfo = await getUserInfo(
     "angeldollface666",
     "blahaj.zone",
@@ -21,5 +22,22 @@ Future<void> main() async {
     "https://blahaj.zone",
     "/api"
   );
-  print(usersFollowers);
+
+  Map<String,dynamic> followUserResp = await followUser(
+    "frisaf",
+    "blahaj.zone",
+    apiToken,
+    "https://blahaj.zone",
+    "/api",
+    false
+  );
+  Map<String,dynamic> unfollowUserResp = await unfollowUser(
+    "frisaf",
+    "blahaj.zone",
+    apiToken,
+    "https://blahaj.zone",
+    "/api",
+    false
+  );
+  print(unfollowUserResp);
 }
