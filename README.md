@@ -11,21 +11,14 @@ This library for Dart is there to interact with Sharkey from Dart or Flutter. Th
 
 ## INSTALLATION :inbox_tray:
 
-### Adding to your project
-
 To add ***Sharkey.dart*** to your project's dependencies, add these lines to your project's `pubspec.yml`:
 
 ```YAML
 dependencies:
-  ...
-  sharkey: ^0.1.0
-```
-
-The three dots represent anything else that you might have in the `dependencies` section.
-Having done that, re-fetch your project's dependencies by running this in the project's root directory:
-
-```bash
-$ dart pub get
+  sharkey:
+    git:
+      url: git@github.com:angeldollface/sharkey.dart.git
+      ref: v.0.1.0
 ```
 
 ## USAGE :hammer:
