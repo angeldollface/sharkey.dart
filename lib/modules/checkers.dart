@@ -7,8 +7,8 @@ Licensed under the DSL v1.
 import 'users.dart';
 
 /// Checks whether the supplied response map
-/// has an "error" key. If it does, "true" is
-/// returned. If it does not, "false" is returned.
+/// has an "error" key. If this is the case, "true" is
+/// returned. If this is not the case, "false" is returned.
 bool responseIsError(Map<String,dynamic> subject){
   bool result = false;
   if (subject.containsKey("error")){
