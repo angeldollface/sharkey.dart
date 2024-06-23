@@ -25,6 +25,13 @@ dependencies:
 
 Visit [this link](https://angeldollface.boo/sharkey.dart) to reference APIs and parameters. If you would like to see some code, you can do so by viewing how the APIs ***Sharkey.dart*** provides by reading the file containing unit tests [here](test/sharkey_test.dart).
 
+## CHANGELOG :black_nib:
+
+### Version 0.1.0
+
+- Initial release.
+- Release on GitHub.
+
 ## NOTE :scroll:
 
 - *Sharkey.dart :shark: :dart:* by Alexander Abraham :black_heart: a.k.a. *"Angel Dollface" :dolls: :ribbon:*
