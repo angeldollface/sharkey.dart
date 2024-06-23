@@ -178,7 +178,7 @@ Future<Map<String,dynamic>> followUser(
   return followUserResp;
 }
 
-/// Attempts to follow a user. If the operation
+/// Attempts to unfollow a user. If the operation
 /// succeeds, a success map is returned. If this
 /// fails, an error map is returned.
 Future<Map<String,dynamic>> unfollowUser(
