@@ -29,11 +29,15 @@ Future<Map<String,dynamic>> getUserNotes(
       userId = targetUserInfo['id'];
     }
     else {
-      // Hm.
+      Map<String,dynamic> errMap = new Map();
+      errMap["error"] = "Could not retrieve user ID!";
+      return errMap;
     }
   }
   else {
-    // Hm.
+    Map<String,dynamic> errMap = new Map();
+      errMap["error"] = "Error response received for retrieving user ID!";
+      return errMap;
   }
   String reqUrl = '$baseUrl$apiBase/users/notes';
   Map<String,dynamic> headers = new Map();
