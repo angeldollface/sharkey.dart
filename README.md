@@ -11,7 +11,7 @@ This library for Dart is there to interact with Sharkey from Dart or Flutter. Th
 
 ## INSTALLATION
 
-To add ***Sharkey.dart*** to your project's dependencies, add these lines to your project's `pubspec.yaml` under the `dependencies` section:
+If you want to add ***Sharkey.dart*** to your project's dependencies, add these lines to your project's `pubspec.yaml` under the `dependencies` section:
 
 ```YAML
 dependencies:
