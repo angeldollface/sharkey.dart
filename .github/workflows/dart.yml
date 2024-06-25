@@ -13,7 +13,7 @@ jobs:
       - name: "Test routines."
         run: dart test --chain-stack-traces
       - name: "Run the example."
-        run: cd example && dart pub get && dart run
+        run: cd example && dart pub get && dart run lib/main.dart
       - name: "Generate documentation."
         run: dart doc
       - name: "Deploy the documentation."
