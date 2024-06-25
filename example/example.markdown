@@ -12,7 +12,7 @@ environment:
   sdk: ^3.4.3
 dependencies:
   sharkey:
-    git: git://github.com/angeldollface/sharkey.dart.git
+    path: ../
 ```
 
 Here's the example itself:
