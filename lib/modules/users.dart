@@ -227,3 +227,25 @@ Future<Map<String,dynamic>> unfollowUser(
   );
   return followUserResp;
 }
+
+/// Attempts to return information on the user owning the provided
+/// API token as a map. If the operation fails, an error map
+/// is returned.
+Future<Map<String,dynamic>> getUserFromToken(
+	String baseUrl,
+	String apiBase,
+	String apiToken,
+) async {
+	String reqUrl = '$baseUrl$apiBase/i';
+	Map<String,dynamic> headers = new Map();
+  headers['Content-Type'] = 'application/json';
+  Map<String,dynamic> payload = new Map();
+  payload['i'] = apiToken;
+	Map<String,dynamic> tokenOwnerInfo = await fetchJSON(
+    'POST', 
+    headers, 
+    payload, 
+    reqUrl
+  );
+  return tokenOwnerInfo;
+}

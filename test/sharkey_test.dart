@@ -234,7 +234,7 @@ Future<void> main() async {
   );
 
   test(
-    "testing the \"unlikeNoteForUser\" function.",
+    "Testing the \"unlikeNoteForUser\" function.",
     () async {
       Map<String,dynamic> unlikedNote = await unlikeNoteForUser(
         apiBase,
@@ -248,7 +248,19 @@ Future<void> main() async {
   );
 
   test(
-    "testing the \"userExists\" function. (true case)",
+    "Testing the \"getUserFromToken\" function.",
+    () async {
+      Map<String,dynamic> tokenOwner = await getUserFromToken(
+        baseUrl,
+        apiBase,
+        apiToken,
+      );
+      expect(false, equals(responseIsError(tokenOwner)));
+    }
+  );
+
+  test(
+    "Testing the \"userExists\" function. (true case)",
     () async {
       bool uExists = await userExists(userName,server,baseUrl,apiBase);
       expect(true, uExists);
@@ -256,7 +268,7 @@ Future<void> main() async {
   );
 
   test(
-    "testing the \"userExists\" function. (false case)",
+    "Testing the \"userExists\" function. (false case)",
     () async {
       bool uExists = await userExists(impossibleUser,server,baseUrl,apiBase);
       expect(false, uExists);

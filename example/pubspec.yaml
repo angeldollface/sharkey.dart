@@ -1,0 +1,10 @@
+name: test
+description: A test app for Sharkey.dart!
+version: 1.0.0
+publish_to: none
+homepage: https://github.com/angeldollface/sharkey.dart
+environment:
+  sdk: ^3.4.3
+dependencies:
+  sharkey:
+    git: git://github.com/angeldollface/sharkey.dart.git

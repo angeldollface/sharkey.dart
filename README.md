@@ -27,10 +27,7 @@ Visit [this link](https://angeldollface.boo/sharkey.dart) to reference APIs and 
 
 ## CHANGELOG
 
-### Version 0.1.0
-
-- Initial release.
-- Release on GitHub.
+The changelog for this package can be found [here](https://github.com/angeldollface/sharkey.dart/blob/main/CHANGELOG.md).
 
 ## NOTE :scroll:
 
