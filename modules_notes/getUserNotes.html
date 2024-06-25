@@ -103,11 +103,15 @@ as a map. If this fails, an error map is returned.</p>
       userId = targetUserInfo[&#39;id&#39;];
     }
     else {
-      &#47;&#47; Hm.
+      Map&lt;String,dynamic&gt; errMap = new Map();
+      errMap[&quot;error&quot;] = &quot;Could not retrieve user ID!&quot;;
+      return errMap;
     }
   }
   else {
-    &#47;&#47; Hm.
+    Map&lt;String,dynamic&gt; errMap = new Map();
+      errMap[&quot;error&quot;] = &quot;Error response received for retrieving user ID!&quot;;
+      return errMap;
   }
   String reqUrl = &#39;$baseUrl$apiBase&#47;users&#47;notes&#39;;
   Map&lt;String,dynamic&gt; headers = new Map();
@@ -154,7 +158,7 @@ as a map. If this fails, an error map is returned.</p>
 <footer>
   <span class="no-break">
     sharkey
-      0.1.0
+      0.2.0
   </span>
 
   

@@ -67,10 +67,6 @@
     </div>
 
     
-<section class="desc markdown">
-  <p>Exports all functions
-in the "users" module.</p>
-</section>
 
 
 
@@ -128,7 +124,7 @@ If the operation fails, an error map is returned.
 </dt>
 <dd>
   Attempts to retrieve a response of
-the supplied type in the request headers and
+the supplied type and
 with the other supplied parameters. If this succeeds,
 the response is returned as a map. If this fails,
 an error is returned as a map.
@@ -174,7 +170,7 @@ fails, an empty string is returned.
 
 </dt>
 <dd>
-  Attempts to get a list of users
+  Attempts to get a map of users
 following a user. If this fails, an error map is
 returned.
   
@@ -189,9 +185,24 @@ returned.
 
 </dt>
 <dd>
-  Attempts to get a list of users a user
+  Attempts to get a map of users a user
 is following. If this fails, an error map is
 returned.
+  
+
+</dd>
+
+          <dt id="getUserFromToken" class="callable">
+  <span class="name"><a href="../modules_users/getUserFromToken.html">getUserFromToken</a></span><span class="signature">(<wbr><span class="parameter" id="getUserFromToken-param-baseUrl"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.4.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">baseUrl</span>, </span><span class="parameter" id="getUserFromToken-param-apiBase"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.4.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">apiBase</span>, </span><span class="parameter" id="getUserFromToken-param-apiToken"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.4.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">apiToken</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/3.4.4/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.4.4/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.4.4/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Attempts to return information on the user owning the provided
+API token as a map. If the operation fails, an error map
+is returned.
   
 
 </dd>
@@ -415,7 +426,7 @@ is returned.
 <footer>
   <span class="no-break">
     sharkey
-      0.1.0
+      0.2.0
   </span>
 
   
